@@ -1,10 +1,9 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
 }
 body{
-    background-color: rgb(18, 125, 196);
-    color: rgb(220, 142, 40);
+    background-color: rgb(27, 82, 118);
+    color: rgb(228, 218, 205);
 }
 
 main{
@@ -15,13 +14,19 @@ main{
 }
 
 h1{
-    font-size: 20;
-    color: blueviolet;
+    font-size: 30;
+    color: rgb(1, 7, 4);
     text-align: center;
+    background-color: rgb(109, 144, 132);
 }
 
+h2{
+    color: rgb(58, 44, 44);
+}
 
 img{
     width: 250px;
     height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
 }
