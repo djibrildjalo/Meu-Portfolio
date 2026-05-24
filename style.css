@@ -8,9 +8,11 @@ body{
 
 main{
     background-color: rgb(84, 84, 195);
-    width: 500;
+    width: 750px;
     margin: auto;
     text-align: justify;
+    box-shadow: 3px 3px 5px black;
+    padding: 10px;
 }
 
 h1{
