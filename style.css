@@ -29,6 +29,6 @@ h2{
 img{
     width: 250px;
     height: 250px;
-    border-radius: 50%;
+   /* border-radius: 50%;*/
     object-fit: cover;
 }
