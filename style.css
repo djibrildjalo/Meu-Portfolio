@@ -2,7 +2,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
-    background-color: rgb(27, 82, 118);
+    background-color: #0f172a;
     color: rgb(228, 218, 205);
 }
 div{
@@ -21,23 +21,24 @@ a:hover{
 }
 
 main{
-    background-color: rgb(72, 125, 226);
+    background-color: #1e293b;
     width: 700px;
     margin: auto;
     text-align: justify;
     box-shadow: 3px 3px 5px black;
-    padding: 10px;
+    padding: 40px;
+line-height: 1.6;
 }
 
 h1{
     font-size: 30;
-    color: rgb(1, 7, 4);
+    color: #38bdf8;
     text-align: center;
     background-color: rgb(109, 144, 132);
 }
 
 h2{
-    color: rgb(58, 44, 44);
+    color: #38bdf8;
 }
 
 img{
@@ -46,4 +47,7 @@ img{
     height: 170px;
     border-radius: 50%;
     object-fit: cover;
+}
+p{
+    color: #f8fafc;
 }
