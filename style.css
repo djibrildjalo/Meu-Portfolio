@@ -19,34 +19,41 @@
 }
 
 body{
-    margin: 40px;
+    margin: 15px;
     margin-top: 0px;
 
 }
 
 header{
-    display: flex;
+    /* display: flex; */
     background-color: var(--cor2);
     color: var(--cor1);
-    gap: 30px;
+    /* gap: 30px;
     align-items: center;
-    flex: 1;
+    flex: 1; */
     padding: 25px;
     border-radius: 0px 0px 12px 12px;
     margin: 0px auto 30px auto;
 }
 
-header > img{
+header > div{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex: 1;
+}
+
+header > div > img{
     max-width: 130px;
     border-radius: 50%;
 }
 
-header h1{
+header > div > h1{
     font-weight: bolder;
     font-family: var(--fonte-destaque);
 }
 
-header p{
+header > div > p{
     text-align: justify;
     font-family: var(--fonte-padrão);
 }
