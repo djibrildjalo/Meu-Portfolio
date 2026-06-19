@@ -127,3 +127,36 @@ div.projetos a:hover{
     color: #d74747;
     text-decoration: underline;
 }
+
+section ul{
+    list-style: none;
+}
+
+section.mensagem{
+    margin-top: 20px;
+}
+
+section label,
+section input{
+    display: block;
+}
+
+input.mensagem,
+textarea.mensagem{
+    min-width: 500px;
+    background-color: rgba(221, 216, 216, 0.552);
+    border: none;
+}
+
+input.enviar{
+    padding: 05px 20px;
+    background-color: #7912e7;
+    color: white;
+    border-color: #7912e7;
+    transition: 0.5s;
+}
+
+input.enviar:hover{
+    background-color: white;
+    color: #7912e7;
+}
