@@ -141,22 +141,26 @@ section input{
     display: block;
 }
 
+section.mensagem p{
+    color: var(--cor2);
+}
+
 input.mensagem,
 textarea.mensagem{
-    min-width: 500px;
+    min-width: 455px;
     background-color: rgba(221, 216, 216, 0.552);
     border: none;
 }
 
 input.enviar{
     padding: 05px 20px;
-    background-color: #7912e7;
-    color: white;
-    border-color: #7912e7;
+    background-color: var(--cor2);
+    color: var(--cor1);
+    border-color: var(--cor2);
     transition: 0.5s;
 }
 
 input.enviar:hover{
-    background-color: white;
-    color: #7912e7;
+    background-color: var(--cor1);
+    color: var(--cor2);
 }
