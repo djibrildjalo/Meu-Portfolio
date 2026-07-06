@@ -53,6 +53,31 @@ header > div > p{
     font-family: var(--fonte-padrão);
 }
 
+.menu{
+    position: absolute;
+    text-align: center;
+
+}
+
+.menu-links{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    top: -20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--cor1);
+    position: relative;
+}
+
+nav a:hover{
+    background-color: var(--cor1);
+    color: var(--cor2);
+}
+
 section.habilidade ul{
     display: flex;
     gap: 30px;
@@ -74,7 +99,7 @@ main{
     font-family: var(--fonte-padrão);
 }
 
-main h2{
+h2{
     color: var(--cor2);
     font-family: var(--fonte-titulo);
 }
@@ -127,6 +152,18 @@ section ul{
     list-style: none;
 }
 
+.escondido{
+    display: none;
+}
+
+.botao{
+    background-color: var(--cor2);
+    color: var(--cor1);
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px transparent;
+}
+
 section.mensagem{
     margin-top: 20px;
     margin: auto;
@@ -163,9 +200,29 @@ input.enviar{
     color: var(--cor1);
     border-color: var(--cor2);
     transition: 0.5s;
+    border-radius: 5px;
 }
 
 input.enviar:hover{
     background-color: var(--cor1);
     color: var(--cor2);
+}
+
+p a{
+    text-decoration: none;
+}
+
+p a:hover{
+    background-color: var(--cor2);
+    color: var(--cor1);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+footer p{
+    background-color: var(--cor2);
+    color: var(--cor1);
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
 }
