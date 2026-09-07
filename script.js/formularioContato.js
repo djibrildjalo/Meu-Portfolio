@@ -63,3 +63,29 @@ const comentario = document.querySelector("#comentario");
 
     formulario.reset();
 });
+
+// para enviar a mensagem para whatsapp
+const eniviar = document.querySelector(".enviar");
+
+eniviar.addEventListener("click", () => {
+
+    // chamei esses valores de novo para colocar ".value" porque se não, não aparece os valores
+    const nome = document.querySelector("#nome").value;
+    const email = document.querySelector("#email").value;
+    const comentario = document.querySelector("#comentario").value;
+
+    const phone = "5571992921723";
+
+    // mensagem que será enviada
+    const mesage = `Olá! Meu nome é ${nome}.
+    Meu email é: ${email}
+    
+    Mesagem:
+    ${comentario}`;
+
+    // Transformando a mensagem em formato adequado para URL
+    const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(mesage)}`;
+
+    window.open(whatsappURL, "_blank");
+
+});
