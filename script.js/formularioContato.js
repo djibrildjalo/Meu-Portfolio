@@ -59,7 +59,9 @@ const comentario = document.querySelector("#comentario");
     }
 
     // sucesso
-    alert("Mensagem enviada com sucesso!");
+    // alert("Mensagem enviada com sucesso!");
+
+    // desativei o alert, porque para enviar para whatsapp não precisa dessa mensagem
 
     formulario.reset();
 });

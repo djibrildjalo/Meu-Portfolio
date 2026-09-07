@@ -97,6 +97,7 @@ section.habilidade li{
 main{
     background-color: var(--cor1);
     font-family: var(--fonte-padrão);
+    min-height: 299px;
 }
 
 h2{
@@ -192,6 +193,16 @@ textarea.mensagem{
     background-color: rgba(221, 216, 216, 0.552);
     border: none;
 }
+
+main {
+        min-height: 200px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    main {
+        min-height: 330px;
+    }
 }
 
 input.enviar{
