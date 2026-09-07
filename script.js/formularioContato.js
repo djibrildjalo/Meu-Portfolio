@@ -1,93 +1,69 @@
-// elementos selecionados para pegar os elementos do DOM
+// Elementos usados para abrir/fechar e preencher o formulário.
 const botaoMensagem = document.querySelector('.botao');
 const formularioContato = document.querySelector('.contato');
 
-// O clique
+// Alterna a visibilidade do formulário e informa o estado para leitores de tela.
 botaoMensagem.addEventListener('click', () => {
     formularioContato.classList.toggle('escondido');
     if ( formularioContato.classList.contains('escondido')) {
         botaoMensagem.textContent = 'Enviar mensagem';
-    } else{
-        botaoMensagem.textContent = 'Cancelar envio';
+        botaoMensagem.setAttribute('aria-expanded', 'false');
+    } else {
+        botaoMensagem.textContent = 'Fechar formulário';
+        botaoMensagem.setAttribute('aria-expanded', 'true');
     }
 });
 
-// seleciona o formulário
-const formulario = document.querySelector('.contato');
-
-// seleciona os campos pela classe
-const campos = document.querySelectorAll('.mensagem');
-
-formulario.addEventListener('submit', function(event) {
-
-    // impede o envio do formulário
+formularioContato.addEventListener('submit', function (event) {
+    // O formulário será enviado para o WhatsApp, não para um servidor.
     event.preventDefault();
 
-const nome = document.querySelector("#nome");
-const email = document.querySelector("#email");
-const comentario = document.querySelector("#comentario");
+    // Captura os campos para validar os valores e montar a mensagem.
+    const nome = document.querySelector('#nome');
+    const email = document.querySelector('#email');
+    const comentario = document.querySelector('#comentario');
 
-    // remove bordas anteriores
-    nome.style.border = "";
-    email.style.border = "";
-    comentario.style.border = "";
+    // Remove os destaques de erro de uma tentativa anterior.
+    [nome, email, comentario].forEach(function (campo) {
+        campo.style.border = '';
+    });
 
-    // validação do nome
+    // Valida o tamanho mínimo do nome antes de continuar.
     if (nome.value.trim().length < 3) {
-        nome.style.border = "2px solid red";
-        alert("O nome deve possuir pelo menos 3 caracteres.");
+        nome.style.border = '2px solid red';
+        alert('O nome deve possuir pelo menos 3 caracteres.');
         nome.focus();
         return;
     }
 
-    // validação do email
+    // Verifica se o e-mail possui o formato básico esperado.
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!regexEmail.test(email.value)) {
-        email.style.border = "2px solid red";
-        alert("Digite um e-mail válido.");
+    if (!regexEmail.test(email.value.trim())) {
+        email.style.border = '2px solid red';
+        alert('Digite um e-mail válido.');
         email.focus();
         return;
     }
 
-    // validação do comentário
+    // Exige uma mensagem com contexto suficiente para o contato.
     if (comentario.value.trim().length < 10) {
-        comentario.style.border = "2px solid red";
-        alert("O comentário deve possuir pelo menos 10 caracteres.");
+        comentario.style.border = '2px solid red';
+        alert('O comentário deve possuir pelo menos 10 caracteres.');
         comentario.focus();
         return;
     }
 
-    // sucesso
-    // alert("Mensagem enviada com sucesso!");
+    // Monta a mensagem e codifica o texto para uso seguro na URL do WhatsApp.
+    const telefone = '5571992921723';
+    const mensagem = `Olá! Meu nome é ${nome.value.trim()}.
+Meu e-mail é: ${email.value.trim()}
 
-    // desativei o alert, porque para enviar para whatsapp não precisa dessa mensagem
+Mensagem:
+${comentario.value.trim()}`;
+    const whatsappURL = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
 
-    formulario.reset();
-});
-
-// para enviar a mensagem para whatsapp
-const eniviar = document.querySelector(".enviar");
-
-eniviar.addEventListener("click", () => {
-
-    // chamei esses valores de novo para colocar ".value" porque se não, não aparece os valores
-    const nome = document.querySelector("#nome").value;
-    const email = document.querySelector("#email").value;
-    const comentario = document.querySelector("#comentario").value;
-
-    const phone = "5571992921723";
-
-    // mensagem que será enviada
-    const mesage = `Olá! Meu nome é ${nome}.
-    Meu email é: ${email}
-    
-    Mesagem:
-    ${comentario}`;
-
-    // Transformando a mensagem em formato adequado para URL
-    const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(mesage)}`;
-
-    window.open(whatsappURL, "_blank");
-
+    // Abre uma nova conversa e limpa o formulário após o envio.
+    window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+    formularioContato.reset();
 });
