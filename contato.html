@@ -5,35 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stilos/style.css">
     <link rel="shortcut icon" href="Minha imagem sem fundo.png" type="image/x-icon">
+    <script src="script.js/formularioContato.js" defer></script>
     <title>Contato</title>
 </head>
 <body>
-    <section>
-            <h2>Para entrar em contato</h2>
-            <p>Você pode me encontrar em meus perfis ou enviar mensagem.</p>
-            <ul>
-                <li><p><a href="https://Instagram.com/abdulaidjalo52" target="_blank">Instagram</a></p></li>
-                <li><p><a href="https://github.com/djibrildjalo" target="_blank">GitHub</a></p></li>
-            </ul>
-        </section>
-
-        <section class="mensagem">
-                <button class="botao" type="button" aria-expanded="false" aria-controls="formulario-contato">Enviar mensagem</button>
-            <form class="contato escondido" id="formulario-contato">
-                <label for="nome">Nome</label>
-                <input class="mensagem" id="nome" type="text" name="nome" minlength="3" required>
-                <label for="email">E-mail</label>
-                <input class="mensagem" id="email" type="email" name="email" required>
-                <label for="comentario">Comentário</label>
-                <textarea class="mensagem" id="comentario" name="comentario" minlength="10" required></textarea>
-            
-                <input class="enviar" type="submit" name="enviar" value="Enviar para o WhatsApp">
-            </form>
-        </section>
+    <section class="geral">
+        <section>
+                <h2>Para entrar em contato</h2>
+                <p>Você pode me encontrar em meus perfis ou enviar mensagem.</p>
+                <ul>
+                    <li><p><a href="https://Instagram.com/abdulaidjalo52" target="_blank">Instagram</a></p></li>
+                    <li><p><a href="https://github.com/djibrildjalo" target="_blank">GitHub</a></p></li>
+                </ul>
+            </section>
+            <section class="mensagem">
+                    <button class="botao" type="button" aria-expanded="false" aria-controls="formulario-contato">Enviar mensagem</button>
+                <form class="contato escondido" id="formulario-contato">
+                    <label for="nome">Nome</label>
+                    <input class="mensagem" id="nome" type="text" name="nome" minlength="3" required>
+                    <label for="email">E-mail</label>
+                    <input class="mensagem" id="email" type="email" name="email" required>
+                    <label for="comentario">Comentário</label>
+                    <textarea class="mensagem" id="comentario" name="comentario" minlength="10" required></textarea>
+        
+                    <input class="enviar" type="submit" name="enviar" value="Enviar para o WhatsApp">
+                </form>
+            </section>
+    </section>
 
         <a href="index.html"><img src="btn-voltar.png" alt=""></a>
-
-    <script src="script.js/formularioContato.js"></script>
 </body>
 </html>
 

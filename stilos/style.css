@@ -145,6 +145,18 @@ main p, main li {
     font-size: 1.02rem;
 }
 
+p a {
+    font-size: 0.7em;
+    margin-left: 8px;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+p a:hover {
+    color: #007bff;
+}
+
 main a {
     color: var(--cor2);
     font-weight: 700;
@@ -152,6 +164,10 @@ main a {
 
 main a:hover {
     text-decoration: underline;
+}
+
+section.geral{
+    min-height: 650px;
 }
 
 section.habilidade ul {
