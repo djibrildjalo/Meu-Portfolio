@@ -3,16 +3,16 @@ const botaoMensagem = document.querySelector('.botao');
 const formularioContato = document.querySelector('.contato');
 
 // Alterna a visibilidade do formulário e informa o estado para leitores de tela.
-// botaoMensagem.addEventListener('click', () => {
-//     formularioContato.classList.toggle('escondido');
-//     if ( formularioContato.classList.contains('escondido')) {
-//         botaoMensagem.textContent = 'Enviar mensagem';
-//         botaoMensagem.setAttribute('aria-expanded', 'false');
-//     } else {
-//         botaoMensagem.textContent = 'Fechar formulário';
-//         botaoMensagem.setAttribute('aria-expanded', 'true');
-//     }
-// });
+botaoMensagem.addEventListener('click', () => {
+    formularioContato.classList.toggle('escondido');
+    if ( formularioContato.classList.contains('escondido')) {
+        botaoMensagem.textContent = 'Enviar mensagem';
+        botaoMensagem.setAttribute('aria-expanded', 'false');
+    } else {
+        botaoMensagem.textContent = 'Fechar formulário';
+        botaoMensagem.setAttribute('aria-expanded', 'true');
+    }
+});
 
 formularioContato.addEventListener('submit', function (event) {
     // O formulário será enviado para o WhatsApp, não para um servidor.

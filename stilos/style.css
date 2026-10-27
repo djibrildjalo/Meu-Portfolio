@@ -229,7 +229,7 @@ div.projetos a {
 }
 
 .escondido {
-    display: none;
+    display: none !important;
 }
 
 section.mensagem {
